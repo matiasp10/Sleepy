@@ -88,7 +88,7 @@ const AddRecord = () => {
                                 name='date'
                                 id='date'
                                 className='block w-full border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 px-4 py-2 bg-background dark'
-                                placeholder='Select a date'
+                                placeholder='Elige una fecha'
                                 required
                                 onFocus={(e) => e.target.showPicker()}
                             />

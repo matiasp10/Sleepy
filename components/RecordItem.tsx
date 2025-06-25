@@ -21,7 +21,15 @@ const RecordItem = ({ record }: { record: Record }) => {
         >
             <div className='flex flex-col'>
                 <span className='text-sm text-gray-200'>
-                    {new Date(record?.date).toLocaleDateString()}
+                    {(() => {
+                        const date = new Date(record.date);
+                        const offsetDate = new Date(date.getTime() + date.getTimezoneOffset() * 60000);
+                        return offsetDate.toLocaleDateString('es-AR', {
+                            day: '2-digit',
+                            month: '2-digit',
+                            year: 'numeric',
+                        });
+                    })()}
                 </span>
                 <span className='text-lg font-bold text-gray-400'>
                     {record?.amount} Horas

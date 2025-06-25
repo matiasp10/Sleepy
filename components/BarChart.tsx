@@ -27,7 +27,18 @@ interface Record {
 
 const BarChart = ({ records }: { records: Record[] }) => {
     const data = {
-        labels: records.map((record) => new Date(record.date).toLocaleDateString()),
+        labels: records.map((record) => {
+            return (() => {
+                const date = new Date(record.date);
+                // Compensar la diferencia horaria sumando las horas de offset
+                const offsetDate = new Date(date.getTime() + date.getTimezoneOffset() * 60000);
+                return offsetDate.toLocaleDateString('es-AR', {
+                    day: '2-digit',
+                    month: '2-digit',
+                    year: 'numeric',
+                });
+            })()
+        }),
         datasets: [
             {
                 data: records.map((record) => record.amount),
