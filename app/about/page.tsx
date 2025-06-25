@@ -16,27 +16,16 @@ const AboutPage = () => {
 
             {/* Mission Section */}
             <section className='py-16 px-8 bg-gray-950'>
-                <h2 className='text-3xl font-bold text-center mb-8'>Our Mission</h2>
+                <h2 className='text-3xl font-bold text-center mb-8'>Mi mision</h2>
                 <p className='text-gray-200 max-w-3xl mx-auto text-center'>
-                    At SleepTracker, we aim to help individuals achieve better sleep and
-                    overall well-being by providing insights into their sleep patterns.
-                    Better sleep leads to a healthier, happier life, and we’re here to
-                    guide you every step of the way.
+                    En DreamTracker, buscamos ayudar a las personas a conseguir un mejor sueño y a su vez mejorar su salud general. Mejorar el sueño lleva a una vida mas placentera, mas feliz y mas saludable.
                 </p>
             </section>
-
-            {/* Features Section */}
             <section className='py-16 px-8 bg-black'>
                 <h2 className='text-3xl font-bold text-center mb-8'>
                     Porque elegir DreamTracker?
                 </h2>
                 <div className='max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8'>
-                    {/* <div className='bg-white p-6 rounded-md shadow'>
-                        <h3 className='text-xl font-bold mb-2'>Comprehensive Tracking</h3>
-                        <p className='text-gray-600'>
-                            Monitor your sleep patterns and identify areas for improvement.
-                        </p>
-                    </div> */}
                     <Card className='bg-background dark p-4 rounded-md shadow'>
                         <CardTitle>Seguimiento inteligente</CardTitle>
                         <CardDescription>Monitorea tus patrones de sueño e identifica áreas para mejorar.</CardDescription>
@@ -53,7 +42,6 @@ const AboutPage = () => {
                 </div>
             </section>
 
-            {/* Story Section */}
             <section className='py-16 px-8 bg-gray-950'>
                 <h2 className='text-3xl font-bold text-center mb-8'>Nuestra historia</h2>
                 <p className='text-gray-200 max-w-3xl mx-auto text-center'>
